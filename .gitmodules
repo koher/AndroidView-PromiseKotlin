@@ -1,0 +1,3 @@
+[submodule "modules/PromiseKotlin"]
+	path = modules/PromiseKotlin
+	url = https://github.com/koher/PromiseKotlin.git
