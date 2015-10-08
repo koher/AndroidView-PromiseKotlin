@@ -30,8 +30,8 @@
     <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/androidTest/debug" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../modules/PromiseKotlin/project/app/src/main/java">
-      <sourceFolder url="file://$MODULE_DIR$/../../modules/PromiseKotlin/project/app/src/main/java" isTestSource="false" />
+    <content url="file://$MODULE_DIR$/../../modules/PromiseKotlin/project/app/src/lib/kotlin">
+      <sourceFolder url="file://$MODULE_DIR$/../../modules/PromiseKotlin/project/app/src/lib/kotlin" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/kapt/debug" isTestSource="false" generated="true" />
@@ -61,6 +61,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/aidl" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/kotlin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/lib/kotlin" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />

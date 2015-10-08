@@ -13,8 +13,9 @@ android {
         versionName "1.0"
     }
     sourceSets {
-        main.java.srcDirs += '../../modules/PromiseKotlin/project/app/src/main/java'
         main.java.srcDirs += 'src/main/kotlin'
+        main.java.srcDirs += 'src/lib/kotlin'
+        main.java.srcDirs += '../../modules/PromiseKotlin/project/app/src/lib/kotlin'
     }
     buildTypes {
         release {
