@@ -31,15 +31,15 @@ public data class Item<T>(val title: String, val value: T)
 
 public data class Value<T>(val value: T)
 
-public fun promisedShowAlertDialog<T>(context: Context, title: String? = null, message: String? = null, positiveButton: Item<T>? = null, negativeButton: Item<T>? = null, neutralButton: Item<T>? = null): Promise<T> {
+public fun <T> promisedShowAlertDialog(context: Context, title: String? = null, message: String? = null, positiveButton: Item<T>? = null, negativeButton: Item<T>? = null, neutralButton: Item<T>? = null): Promise<T> {
     return promisedShowAlertDialog(context, title, message, positiveButton, negativeButton, neutralButton, null)
 }
 
-public fun promisedShowAlertDialog<T : Any>(context: Context, title: String? = null, message: String? = null, positiveButton: Item<T>? = null, negativeButton: Item<T>? = null, neutralButton: Item<T>? = null, cancelValue: T?): Promise<T> {
+public fun <T : Any> promisedShowAlertDialog(context: Context, title: String? = null, message: String? = null, positiveButton: Item<T>? = null, negativeButton: Item<T>? = null, neutralButton: Item<T>? = null, cancelValue: T?): Promise<T> {
     return promisedShowAlertDialog(context, title, message, positiveButton, negativeButton, neutralButton, cancelValue?.let { Value(it) })
 }
 
-public fun promisedShowAlertDialog<T>(context: Context, title: String? = null, message: String? = null, positiveButton: Item<T>? = null, negativeButton: Item<T>? = null, neutralButton: Item<T>? = null, cancelValue: Value<T>?): Promise<T> {
+public fun <T> promisedShowAlertDialog(context: Context, title: String? = null, message: String? = null, positiveButton: Item<T>? = null, negativeButton: Item<T>? = null, neutralButton: Item<T>? = null, cancelValue: Value<T>?): Promise<T> {
     return Promise { resolve ->
         val builder = AlertDialog.Builder(context)
 
@@ -79,15 +79,15 @@ public fun promisedShowAlertDialog<T>(context: Context, title: String? = null, m
     }
 }
 
-public fun promisedShowAlertDialog<T>(context: Context, title: String? = null, items: List<Item<T>>): Promise<T> {
+public fun <T> promisedShowAlertDialog(context: Context, title: String? = null, items: List<Item<T>>): Promise<T> {
     return promisedShowAlertDialog(context, title, items, null)
 }
 
-public fun promisedShowAlertDialog<T : Any>(context: Context, title: String? = null, items: List<Item<T>>, cancelValue: T?): Promise<T> {
+public fun <T : Any> promisedShowAlertDialog(context: Context, title: String? = null, items: List<Item<T>>, cancelValue: T?): Promise<T> {
     return promisedShowAlertDialog(context, title, items, cancelValue?.let { Value(it) })
 }
 
-public fun promisedShowAlertDialog<T>(context: Context, title: String? = null, items: List<Item<T>>, cancelValue: Value<T>?): Promise<T> {
+public fun <T> promisedShowAlertDialog(context: Context, title: String? = null, items: List<Item<T>>, cancelValue: Value<T>?): Promise<T> {
     return Promise { resolve ->
         val builder = AlertDialog.Builder(context)
 
