@@ -9,17 +9,17 @@ public fun promisedAnimate(animations: () -> Animator): Promise<Boolean> {
     return Promise { resolve ->
         val animator = animations()
         animator.addListener(object : Animator.AnimatorListener {
-            override fun onAnimationStart(animation: Animator?) {
+            override fun onAnimationStart(animation: Animator) {
             }
 
-            override fun onAnimationRepeat(animation: Animator?) {
+            override fun onAnimationRepeat(animation: Animator) {
             }
 
-            override fun onAnimationEnd(animation: Animator?) {
+            override fun onAnimationEnd(animation: Animator) {
                 resolve(Promise(true))
             }
 
-            override fun onAnimationCancel(animation: Animator?) {
+            override fun onAnimationCancel(animation: Animator) {
                 resolve(Promise(false))
             }
         })
